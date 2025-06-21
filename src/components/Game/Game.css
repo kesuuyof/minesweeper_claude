@@ -1,0 +1,82 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Arial', sans-serif;
+}
+
+.game-title {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.game-message {
+  margin-top: 20px;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  animation: slideIn 0.5s ease-out;
+}
+
+.game-message.victory {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.game-message.defeat {
+  background-color: #f44336;
+  color: white;
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .game {
+    padding: 15px;
+  }
+  
+  .game-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  .game-message {
+    font-size: 1.1em;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game {
+    padding: 10px;
+  }
+  
+  .game-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .game-message {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}

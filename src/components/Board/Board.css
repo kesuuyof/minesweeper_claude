@@ -1,0 +1,28 @@
+.board {
+  display: grid;
+  gap: 1px;
+  background-color: #999;
+  border: 3px solid #999;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .board {
+    margin: 10px auto;
+    gap: 0.5px;
+    padding: 2px;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .board {
+    margin: 5px auto;
+    gap: 0.5px;
+    padding: 1px;
+    border-width: 1px;
+  }
+}
